@@ -88,12 +88,10 @@ h3 {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
-  list-style-type: none;
 }
 
 #portfolio li:hover {
   background: #3e6f75;
-  list-style-type: none;
 }
 
 #portfolio a {
