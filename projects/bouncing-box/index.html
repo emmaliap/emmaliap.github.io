@@ -10,7 +10,6 @@
 			width: 70px;
 			height: 70px;
 			background-color: teal;
-			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
@@ -78,10 +77,10 @@
 			*/
 			function update() {
 
-				if (positionX > 1800) {
+				if (positionX > boardWidth) {
 					speed = -speed;
-			} else if (positionX < -1) {
-				speed = -speed * -speed;
+			} else if (positionX < 0) {
+				speed = speed * -1;
 			}
 			 /* Your Code to Increase positionX by 10 HERE */
 			positionX = positionX + speed;
@@ -98,13 +97,18 @@
 			function handleBoxClick() {
 				positionX = 0;
 				points = points + 1;
-				speed = speed + 3;
+			if (speed > 0) {
+			speed = speed + 3;
+			} else if (speed < 0) {
+				speed = speed - 3;
+			}
 				changeBoxText(points);
 				
 
 			};
 
-
+			
+		
 
 
 
