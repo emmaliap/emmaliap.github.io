@@ -70,16 +70,23 @@
 			var positionX = 0;
 			var points = 0;
 			var speed = 10;
+	
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
+
+				if (positionX > 1800) {
+					speed = -speed;
+			} else if (positionX < -1) {
+				speed = -speed * -speed;
+			}
 			 /* Your Code to Increase positionX by 10 HERE */
 			positionX = positionX + speed;
 			moveBoxTo(positionX);
-			
+		
 			
 			};
 
