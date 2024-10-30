@@ -45,10 +45,10 @@ var circles = []
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition(0)
-            physikz.updatePosition(1)
-            physikz.updatePosition(2)
-            physikz.updatePosition(3)
+            physikz.updatePosition()
+            physikz.updatePosition()
+            physikz.updatePosition()
+            physikz.updatePosition()
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
            
